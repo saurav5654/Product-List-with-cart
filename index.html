@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Product list with cart</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Desserts</h1>
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be loaded here dynamically -->
+      </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar">
+      <h2>Your Cart</h2>
+      <div id="cartContent" class="cart-content">
+        <div class="empty-cart">
+          <img src="./assets/images/illustration-empty-cart.svg" alt="Empty cart">
+          <p>Your added items will appear here</p>
+        </div>
+      </div>
+      <div id="cartSummary" class="cart-summary" style="display: none;">
+        <div class="order-total">
+          <p>Order Total</p>
+          <p class="total-price" id="totalPrice">$0.00</p>
+        </div>
+        <button class="btn-confirm-order" id="confirmOrderBtn">Confirm Order</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div id="orderModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <img src="./assets/images/icon-order-confirmed.svg" alt="Order confirmed" class="modal-icon">
+      <h2>Order Confirmed</h2>
+      <p>We hope you enjoy your food!</p>
+      <div id="modalOrderItems" class="modal-order-items">
+        <!-- Order items will appear here -->
+      </div>
+      <div class="modal-order-total">
+        <p>Order Total</p>
+        <p class="modal-total-price" id="modalTotalPrice">$0.00</p>
+      </div>
+      <button class="btn-new-order" id="newOrderBtn">Start New Order</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
